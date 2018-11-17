@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Home</title>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="Scripts/scripts.js"></script>
+<script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
+<style>
+body {
+	padding: 0;
+}
+</style>
+<link rel="shortcut icon" href="images/imgYes.jpg">
+</head>
+
+<body>
+<div class="container">
+  <header>
+    <div class="float-left"><a href="index.html" title="YesStrathaven"><img src="images/imgYes.jpg" alt="YesStrathaven" width="1366" height="768" class="header-img"/></a></div>
+    <div class="float-right mobile-float"><a href="https://www.facebook.com/groups/yesstrathaven/" title="facebook/yestrathaven" target="_blank"><img src="images/Facebook-icon-Grey-2.png" width="32" height="32" alt="YesStrathaven facebook" /></a> </div>
+    <div class="float-right donate mobile-float"> <a href="#" class="button" style="color: black">Donate</a> </div>
+    <div class="mobile-view"><img src="images/burger-menu.png" ></div>
+    <div class="dynamic-float"></div>
+    <nav>
+      <div class="float-left desktop-view">
+        <ul class="">
+          <li> <a href="index.html">Home</a></li>
+          <li> <a href="membership.html">Membership</a></li>
+          <li> <a href="events.html">Events</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="dynamic-float2"></div>
+  </header>
+  <div class="main-image"><img src="images/imgYesStra.png" width="650" height="240" alt=""/></div>
+  <main> 
+    <!-- Section 1-->
+    <div class="main-section">
+      <h1>Place Holder Text for Section</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam commodi eveniet repudiandae voluptate illum dolorum soluta qui, corrupti autem ipsum labore doloremque recusandae. Porro, eum ipsum quis quos eligendi fugiat facere ducimus sint earum autem quas magni ea commodi at, dolor enim aut nesciunt voluptates vel nam repellendus vero nulla! Neque placeat nostrum, asperiores, veniam facere beatae voluptatem quisquam ad, voluptates sapiente, optio! Tenetur perspiciatis fugit, voluptatibus adipisci eius ducimus rem ad et nemo in libero quas quidem ipsum iusto id aliquid odit omnis? Harum, culpa rem quasi a sapiente ab provident tempora id. Vel dicta iusto dolore quas nemo.</p>
+    </div>
+    <div class="row"> 
+      <!-- Contact Section-->
+      <div class="col-2">
+        <h1 class="form-head">Contact Us</h1>
+        <form method="post" class="contact-form" action="mail.php" spellcheck="true">
+          <div id="personal">
+            <div class="control-group"> 
+              <!--name field-->
+              <div class="controls">
+                <input class="required span9" type="text" name="name" data-fieldid="0" value="Full Name" onclick="if(this.value=='Full Name') this.value=''" onblur="if(this.value=='') this.value='Full Name'">
+              </div>
+            </div>
+            <div class="control-group"> 
+              <!--email field-->
+              <div class="controls">
+                <input class="required span9" type="email" name="email" data-fieldid="1" value="Your Email" onclick="if(this.value=='Your Email') this.value=''" onblur="if(this.value=='') this.value='Your Email'">
+              </div>
+            </div>
+            <div class="control-group"> 
+              <!--message field-->
+              <div class="controls">
+                <textarea name="message" rows="12" class="required span9" placeholder="Your Message" data-fieldid="2" onclick="if(this.value=='Your Message') this.value=''" onblur="if(this.value=='') this.value='Your Message'" ></textarea>
+              </div>
+              <div class="g-recaptcha" data-sitekey="6Lcs_GMUAAAAAHf4IgtTEm2dPuOCkXFPpFJihA18"></div>
+            </div>
+            <div class="control-group">
+              <div class="main-section main-text">
+                <button type="submit" class="btn-main">Send<i class="fa fa-send" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      
+      <!-- MAP -->
+      <div class="col-2 map">
+        <div id='map' style='width: 100%; height: 450px;'> </div>
+        <script>
+		L.mapbox.accessToken = 'pk.eyJ1IjoibWlrZXN0YW5seSIsImEiOiJjamppczV0YnE1eXJoM2tvNmpla3poaGMyIn0.I820UjMupRh8a64yZ8LEng';
+		var map = L.mapbox.map('map', 'mapbox.streets')
+			.setView([55.67691, -4.06661], 13);
+
+		L.mapbox.featureLayer({
+
+			type: 'Feature',
+			geometry: {
+				type: 'Point',
+
+				coordinates: [-4.06661,55.67691]
+			},
+			properties: {
+				title: 'Strathaven',
+				description: 'Scotland',
+
+				'marker-size': 'large',
+				'marker-color': '#406ab4',
+				'marker-symbol': 'city'
+			}
+		}).addTo(map);
+</script>
+      </div>
+    </div>
+    <div class="clear-float"></div>
+  </main>
+  <footer>
+    <div class="row">
+      <div class="col-2" style="text-align: center;"> <img src="images/imgYes.jpg" width="310" height="310" alt="" class="footer-image"/> </div>
+      <div class="col-2" style="text-align: center;">
+        <h1 class="footer-contact">Contact Details</h1>
+        <p class="footer-contact">yesstrathaven@gmail.com</p>
+        <p class="footer-contact">Strathaven ML10 6LU, Scotland // <br>
+          07816478053</p>
+      </div>
+      <div class="clear-float"></div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

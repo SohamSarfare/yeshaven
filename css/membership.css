@@ -1,0 +1,50 @@
+@charset "utf-8";
+.main-text {
+	text-align: center;
+	padding-top: 25px;
+}
+form {
+	margin-top: 30px;
+	text-align: left;
+	background-color: rgba(179,166,166,0.51);
+	padding-left: 25px;
+	padding-top: 5px;
+	padding-bottom: 25px;
+	padding-right: 25px;
+}
+form div div {
+	margin-top: 30px;
+	padding-right: 34px;
+	text-align: center;
+
+
+}
+form div h3 {
+	padding-top: 20px;
+}
+textarea {
+	height: 100px;
+	width: 250px;
+	float: right;
+}
+label {
+	float: left;
+}
+
+
+
+input {
+	width: 210px;
+	height: 35px;
+	padding-right: 0px;
+	font-family: Arial;
+	text-align: justify;
+	font-weight: bold;
+	float: right;
+}
+
+
+.paypal {
+	text-align: center;
+	width: 100%;
+}

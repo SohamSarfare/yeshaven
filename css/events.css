@@ -1,0 +1,18 @@
+@charset "utf-8";
+.events {
+	text-align: justify;
+}
+main .events a {
+	color: #406ab4;
+}
+.event-img {
+	width: 100px;
+	height: auto;
+	padding-right: 8px;
+	float: left;
+}
+hr {
+	margin-top: 25px;
+	width: 100%;
+
+}
